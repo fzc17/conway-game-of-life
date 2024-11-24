@@ -1,4 +1,4 @@
-function index = surviveIndex(coord)
+function index = surviveIndex(coord, m, n)
 
 index = []; % Store n-th cell survive
 
@@ -9,7 +9,7 @@ for i = 1:len
     count = 0;
     for j = -1:1
         for k = -1:1
-            if ~isempty(locateCoordinate(coord, [coord{i}(1)+j, coord{i}(2)+k]))
+            if ~isempty(locateCoordinate(coord, [coord{i}(1)+j, coord{i}(2)+k])) && coord{i}(1)+j <= m && coord{i}(2)+k <=n
                 count = count + 1;
             end
         end
