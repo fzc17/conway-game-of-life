@@ -1,14 +1,20 @@
-function evolveState(R,C,m,n)
+function surviveC = evolveState(R,C)
 
 % Translate R and C into cells
 coordinate = translateCoordinate(R,C);
+surviveC = {};
 
 % Check for surviving cells
 surviveN = surviveIndex(coordinate);
-
-% Check for dying cells
-deadN = deadIndex(coordinate);
+for i = 1:length(surviveN)
+    surviveC(length(surviveC) + 1) = coordinate(surviveN(i));
+end
 
 % Check for awaking cells
+awakenC = awakenCoord(coordinate);
+
+for i = 1:length(awakenC)
+    surviveC{length(surviveC) + 1} = [awakenC{i}];
+end
 
 end
