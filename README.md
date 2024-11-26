@@ -3,12 +3,11 @@
 In order to maintain working efficiency, make sure to do these steps:
 - Before doing something: do `git pull origin main` to keep ur local repository updated.
 - After finsh working:
-  1. `git add .` : add all modified and new files to the staging area. You can do `git add <filename1> <filename2>` if you want to add some files only. 
-  <img src="https://media.discordapp.net/attachments/1292696584446021653/1310855205285269604/image.png?ex=6746bc8b&is=67456b0b&hm=c080dbea9363285bb384812bc7d112f6c53e26c210d2a21364b1d1d8c46c9493&=&format=webp&quality=lossless&width=1092&height=106" width=100%>
+  1. `git add .` : add all modified and new files to the staging area. You can do `git add <filename1> <filename2>` if you want to add some files only.
+
   2. `git commit -m "short description"` : to create history, update local repository. The description should be clear and short enough to describe what's new. 
-  <img src="https://media.discordapp.net/attachments/1292696584446021653/1310855496390938694/image.png?ex=6746bcd0&is=67456b50&hm=bc4ff1bfe238c1ba5d4d8cb19900cf7304a768042f904ba5fbc857ff560c97b7&=&format=webp&quality=lossless&width=1545&height=157" width=100%>
+
   3. `git push origin main` : to update remote repository (github). 
-  <img src="https://media.discordapp.net/attachments/1292696584446021653/1310855865917771816/image.png?ex=6746bd28&is=67456ba8&hm=ca0a08249acd367f7a341d1bed9e7a86f1555e64fa86ee61b4a21e2d5ead561c&=&format=webp&quality=lossless&width=1476&height=463" width=100%>
 
 Some useful command for inspection:
 - `git log --all --graph` : display log (history). Type `Q` to quit/exit.
