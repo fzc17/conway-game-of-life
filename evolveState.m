@@ -6,15 +6,11 @@ surviveC = {};
 
 % Check for surviving cells
 surviveN = surviveIndex(coordinate,m,n);
-for i = 1:length(surviveN)
-    surviveC(length(surviveC) + 1) = coordinate(surviveN(i));
-end
+surviveC = coordinate(surviveN);
 
 % Check for awaking cells
 awakenC = awakenCoord(coordinate,m,n);
 
-for i = 1:length(awakenC)
-    surviveC{length(surviveC) + 1} = [awakenC{i}];
-end
+surviveC = [surviveC awakenC];
 
 end
