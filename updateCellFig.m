@@ -1,12 +1,12 @@
 function updateCellFig(R,C)
 hold on
-L=translateCoordinate(R,C);
+Length=length(R);
 
-for i=1:length(L)
-    W = R(i);
-    Y = [W-1, W, W, W-1];
-    Q = C(i);
-    X = [Q-1, Q-1, Q, Q];
+for i=1:Length
+    Rval = R(i);
+    Y = [Rval-1, Rval, Rval, Rval-1];
+    Cval = C(i);
+    X = [Cval-1, Cval-1, Cval, Cval];
 
     fill(X,Y,'k')
 end
