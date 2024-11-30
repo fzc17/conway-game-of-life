@@ -1,8 +1,10 @@
-function surviveC = evolveState(R,C,m,n)
+function [Rnew, Cnew] = evolveState(R,C,m,n)
 
 % Translate R and C into cells
 coordinate = translateCoordinate(R,C);
 surviveC = {};
+Rnew = [];
+Cnew = [];
 
 % Check for surviving cells
 surviveN = surviveIndex(coordinate,m,n);
@@ -12,5 +14,10 @@ surviveC = coordinate(surviveN);
 awakenC = awakenCoord(coordinate,m,n);
 
 surviveC = [surviveC awakenC];
+
+for i = 1:length(surviveC)
+    Rnew = [Rnew surviveC{i}(1)];
+    Cnew = [Cnew surviveC{i}(2)];
+end
 
 end
