@@ -2,10 +2,10 @@ function updateCellFig(R,C)
 hold on
 
 for i=1:Length(R)
-    Rval = R(i);
-    Y = [Rval-1, Rval, Rval, Rval-1];
-    Cval = C(i);
-    X = [Cval-1, Cval-1, Cval, Cval];
+    R_value = R(i);
+    Y = [R_value - 1, R_value, R_value, R_value - 1];
+    C_value = C(i);
+    X = [C_value-1, C_value-1, C_value, C_value];
 
     fill(X,Y,'k')
 end
