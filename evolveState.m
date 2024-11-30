@@ -20,4 +20,6 @@ for i = 1:length(surviveC)
     Cnew = [Cnew surviveC{i}(2)];
 end
 
+updateCellFig(Rnew,Cnew,m,n)
+
 end
