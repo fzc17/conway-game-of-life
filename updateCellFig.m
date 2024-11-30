@@ -1,8 +1,7 @@
 function updateCellFig(R,C)
 hold on
-Length=length(R);
 
-for i=1:Length
+for i=1:Length(R)
     Rval = R(i);
     Y = [Rval-1, Rval, Rval, Rval-1];
     Cval = C(i);
