@@ -12,7 +12,7 @@ c = 0;
 for i = 1:lenLiveCell
     for j = -1:1
         for k = -1:1
-            if isempty(locateCoordinate(coord, [coord{i}(1)+j, coord{i}(2)+k])) && coord{i}(1)+j <= m && coord{i}(2)+k <=n
+            if isempty(locateCoordinate(coord, [coord{i}(1)+j, coord{i}(2)+k]))
                 c = c + 1;
                 coord{lenLiveCell + c} = [coord{i}(1)+j, coord{i}(2)+k];
             end

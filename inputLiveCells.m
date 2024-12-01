@@ -8,22 +8,22 @@ R = [];
 C = [];
 
 while true
-[x, y, button] = ginput(1);
-if isempty(button) || button == 13
-    title('');
-    break
+    [x, y, button] = ginput(1);
+    if isempty(button) || button == 13
+        title('');
+        break
+    end
+
+    newR = floor(y) + 1;
+    newC = floor(x) + 1;
+
+    R = [R; newR];
+    C = [C; newC];
+
+    updateCellFig(R,C,m,n)
 end
 
-newR = floor(y) + 1;
-newC = floor(x) + 1;
-
-R = [R; newR];
-C = [C; newC];
-
-updateCellFig(R,C,m,n)
-end
-
-R = transpose(R);
-C = transpose(C);
+R = R';
+C = C';
 
 end
