@@ -20,4 +20,6 @@ while ~isequal([R; C],[Rnew; Cnew]) %as long as pattern is changing following a 
 pause(0.01)
 end
 
+generation = generation - 1;
+
 title(sprintf('Still life. Generation: %d, Population: %d', generation, length(R)))
