@@ -7,7 +7,6 @@ generation = 0;
 figure %open figure window
 drawCells(m,n) %Draw cells (all dead, i.e., white)
 [R,C] = inputLiveCells(m,n,generation); %Populate R and C arrays with subscripts of selected live cells and color live cells black in the figure window
-tic;
 generation = generation + 1;
 
 %Evolve pattern indefinitely
@@ -22,4 +21,3 @@ pause(0.01)
 end
 
 title(sprintf('Still life. Generation: %d, Population: %d', generation, length(R)))
-tic;
