@@ -1,4 +1,4 @@
-function [Rnew, Cnew] = evolveState(R,C,m,n)
+function [Rnew, Cnew] = evolveState(R,C,m,n,generation)
 
 % Translate R and C into cells
 coordinate = translateCoordinate(R,C);
@@ -20,6 +20,6 @@ for i = 1:length(surviveC)
     Cnew = [Cnew surviveC{i}(2)];
 end
 
-updateCellFig(Rnew,Cnew,m,n)
+updateCellFig(Rnew,Cnew,m,n,generation)
 
 end
