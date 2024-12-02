@@ -1,4 +1,4 @@
-function updateCellFig(R,C,m,n)
+function updateCellFig(R,C,m,n,generation)
 
 cla;
 hold on
@@ -13,6 +13,9 @@ for i=1:length(R)
         fill(X,Y,'k')
     end
     drawCells(m,n)
+    if generation > 0
+        title(sprintf('Generation: %d, Population: %d', generation, length(R)));
+    end
 end
 end
     

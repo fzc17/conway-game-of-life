@@ -1,4 +1,4 @@
-function [R, C] = inputLiveCells(m, n)
+function [R, C] = inputLiveCells(m, n, generation)
 
 drawCells(m, n);
 
@@ -20,7 +20,7 @@ while true
     R = [R; newR];
     C = [C; newC];
 
-    updateCellFig(R,C,m,n)
+    updateCellFig(R,C,m,n,generation)
 end
 
 R = R';
